@@ -60,7 +60,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])) {
                     <div class="card card-signup">
                         <form class="form" method="POST">
                             <div class="header header-info text-center">
-                                <h4>Logar</h4>
+                                <h4>Entrar no suporte</h4>
                             </div>
                             <div class="content">
 
