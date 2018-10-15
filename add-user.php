@@ -74,8 +74,8 @@ if(isset($_POST['nome']) && !empty($_POST['nome'])){
         <input type="text" class="form-control" name="nome" placeholder="Ex: Pedro Penha">
         <h4>E-mail</h4>
         <input type="email" class="form-control" name="email" placeholder="Ex: pedro@pedro.com">
-        <h4>Senha</h4>
-        <input type="password" class="form-control" name="senha" placeholder="******">
+        <h4>Senha (5+ caracteres)</h4>
+        <input type="password" class="form-control" name="senha" placeholder="******" minlength="6">
 
         <input class="btn btn-primary" type="submit" value="Adicionar" />
     </form>
