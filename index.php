@@ -15,7 +15,7 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
     <html>
     <head>
         <meta charset="utf-8"/>
-        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+        <link rel="ufgd icon" href="http://egressos.16mb.com/favicon.png">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
         <title>Administração - UFGDWiki</title>
@@ -41,12 +41,16 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
     </head>
     <body style="background:rgba(255,255,255,0.7);">
     <div class="container">
+        <?php $url = $_SERVER['BASE_URL'];?>
         <div class="header">
-            <?php $url = $_SERVER['BASE_URL'];?>
-            <h1>Administração - <a href="<?php echo $url;?>/UFGDWiki">UFGDWiki</a></h1>
+            <br/>
+            <img src="assets/img/ufgd-universidade-federal-da-grande-dourados-logo-BA008DE1C7-seeklogo.com.png" style="width: 100px; height: 105px;">
+            <h1 style="float: right;">Administração - <a onclick="let r = confirm('Deseja ir para UFGDWiki'); if(r === true) window.location.href='<?php echo $url;?>/UFGDWiki';"
+                style="cursor: pointer;">UFGDWiki</a></h1>
 
             <br/>
-            <a class="btn btn-danger btn-round" href="sair.php" style="float: right">
+            <a class="btn btn-danger btn-round" onclick="let r = confirm('Deseja sair do sistema?');
+if(r === true) window.location.href='sair.php';" style="float: right">
                 <i class="material-icons">exit_to_app</i> Sair
             </a>
             <br/>
