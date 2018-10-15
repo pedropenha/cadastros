@@ -29,7 +29,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])) {
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>Suporte</title>
+    <title>Login - Administração</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -60,7 +60,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])) {
                     <div class="card card-signup">
                         <form class="form" method="POST">
                             <div class="header header-info text-center">
-                                <h4>Entrar no suporte</h4>
+                                <h4>Painel de Administração</h4>
                             </div>
                             <div class="content">
 

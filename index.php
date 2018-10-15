@@ -6,7 +6,6 @@ require 'config2.php';
 if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
     ?>
     <script>
-        alert('Você precisa efetuar o login');
         window.location.href="login.php";
     </script>
     <?php
@@ -19,7 +18,7 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
         <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-        <title>Suporte</title>
+        <title>Administração - UFGDWiki</title>
 
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
 
@@ -43,7 +42,8 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
     <body style="background:rgba(255,255,255,0.7);">
     <div class="container">
         <div class="header">
-            <h1>Suporte</h1>
+            <?php $url = $_SERVER['BASE_URL'];?>
+            <h1>Administração - <a href="<?php echo $url;?>/UFGDWiki">UFGDWiki</a></h1>
 
             <br/>
             <a class="btn btn-danger btn-round" href="sair.php" style="float: right">
@@ -85,9 +85,18 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
                             <h5><?php echo $item['email']; ?></h5>
                         </td>
                         <td>
-                            <button class="btn btn-info btn-round">Editar</button>
-                            |
-                            <button class="btn btn-danger btn-round">Excluir</button>
+                            <a class="btn btn-info btn-round btn-sm" href="editar.php?nome=<?php echo $item['name'];?>"><i class="material-icons">
+                                    edit
+                                </i></a>
+
+                            <a class="btn btn-danger btn-round btn-sm" onclick="
+                                    let verifica = confirm('Deseja realmente excluir o usuario: '+'<?php echo $item['name'];?>'+'?');
+                                    if(verifica === true){
+                                    window.location.href='excluir.php?nome=<?php echo $item['name']; ?>'
+                                    }
+                                    "><i class="material-icons">
+                                    delete_outline
+                                </i></a>
                         </td>
                     </tr>
                     <?php
