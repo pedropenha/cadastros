@@ -82,8 +82,8 @@ require 'config2.php';
         <input type="text" class="form-control" name="nome" value="<?php echo $item['name'];?>">
         <h4>E-mail</h4>
         <input type="email" class="form-control" name="email" value="<?php echo $item['email'];?>">
-        <h4>Senha</h4>
-        <input type="password" class="form-control" name="senha" value="<?php echo $item['password']?>"/>
+        <h4>Senha (5+ caracteres</h4>
+        <input type="password" class="form-control" name="senha" value="<?php echo $item['password']?>" minlength="5"/>
 
         <input class="btn btn-success" type="submit" value="Salvar alterações" />
     </form>
