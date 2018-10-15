@@ -2,11 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="556c23a5-50ac-4e8b-acf8-3cfdf32b1e34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/add-user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editar.php" beforeDir="false" afterPath="$PROJECT_DIR$/editar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/excluir.php" beforeDir="false" afterPath="$PROJECT_DIR$/excluir.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/apple-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/arrow-left.cur" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/arrow-right.cur" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/christian.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/cold-montain.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/cold.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/default-avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/kendall.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/landing.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/loading-bubbles.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/marc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/w439mEw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,23 +83,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="2947" />
+          <entry key="php" value="2952" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="2946" />
+          <entry key="PHP" value="2951" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="16" />
+          <entry key="php" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="16" />
+          <entry key="PHP" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.command.options" />
@@ -125,16 +140,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="560">
-              <caret line="46" column="143" selection-start-line="46" selection-start-column="143" selection-end-line="46" selection-end-column="143" />
+              <caret line="46" column="144" selection-start-line="46" selection-start-column="144" selection-end-line="46" selection-end-column="144" />
               <folding>
                 <element signature="e#2028#2048#0#HTML" expanded="true" />
                 <element signature="e#2206#2230#0#HTML" expanded="true" />
                 <element signature="e#2199#2219#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="55" column="83" selection-start-line="55" selection-start-column="83" selection-end-line="55" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -152,11 +176,11 @@
         <option value="$PROJECT_DIR$/add-transacao.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/config2.php" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/add-user.php" />
         <option value="$PROJECT_DIR$/editar.php" />
         <option value="$PROJECT_DIR$/excluir.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/login.php" />
       </list>
     </option>
   </component>
@@ -232,12 +256,12 @@
       <workItem from="1539567364540" duration="131000" />
       <workItem from="1539570022974" duration="4029000" />
       <workItem from="1539574314381" duration="348000" />
-      <workItem from="1539628200474" duration="847000" />
+      <workItem from="1539628200474" duration="1270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11297000" />
+    <option name="totallyTimeSpent" value="11720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
@@ -291,13 +315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="62" column="59" selection-start-line="62" selection-start-column="59" selection-end-line="62" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/add-user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="846">
@@ -322,12 +339,19 @@
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
-          <caret line="46" column="143" selection-start-line="46" selection-start-column="143" selection-end-line="46" selection-end-column="143" />
+          <caret line="46" column="144" selection-start-line="46" selection-start-column="144" selection-end-line="46" selection-end-column="144" />
           <folding>
             <element signature="e#2028#2048#0#HTML" expanded="true" />
             <element signature="e#2206#2230#0#HTML" expanded="true" />
             <element signature="e#2199#2219#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="55" column="83" selection-start-line="55" selection-start-column="83" selection-end-line="55" selection-end-column="83" />
         </state>
       </provider>
     </entry>
