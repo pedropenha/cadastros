@@ -28,6 +28,13 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
             $query->bindValue(3, $senha);
             $query->execute();
 
+            $query = "INSERT INTO suporte.usuarios(nome, email, senha) VALUES (?,?,?)";
+            $query = $pdo->prepare($query);
+            $query->bindValue(1, $nome);
+            $query->bindValue(2, $email);
+            $query->bindValue(3, $senha);
+            $query->execute();
+
             header("Location: index.php");
         } else {
             ?>
