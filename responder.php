@@ -70,7 +70,7 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
 
                     $up = "UPDATE suporte.msg SET respondida = 1 WHERE id = ?";
                     $up = $pdo->prepare($up);
-                    $up->bindValue(1, $_SESSION['banco']);
+                    $up->bindValue(1, addslashes($_GET['id']));
                     $up->execute();
 
                     ?>

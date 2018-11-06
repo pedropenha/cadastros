@@ -91,24 +91,34 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
                         $sql = $pdo->prepare($sql);
                         $sql->execute();
 
-                        foreach ($sql->fetchAll() as $item):
-                            ?>
-                            <div class="card card-nav-tabs">
-                                <h3 class="card-header card-header-info">Remetente - <?php echo $item['usr_remetente'];?></h3>
-                                <div class="card-body">
-                                    <h4 class="card-text text-justify" style="margin-left: 10%;">Assunto - <?php echo $item['assunto'];?>
-                                        <span class="badge badge-success" style="float: right; margin-right: 10%;">Respondida</span></h4>
-                                    <hr style="width: 50% !important;"/>
-                                    <h4 class="card-text text-justify" style="margin-left: 10%;">Mensagem: <?php echo $item['msg_anterior']?></h4>
-                                    <hr style="width: 50% !important;"/>
-                                    <h4 class="card-text text-justify" style="margin-left: 10%;">Resposta <?php echo $item['resposta']?></h4>
-                                    <h4 class="card-text text-justify" style="margin-right: 10%; float: right;">Dia e hora da resposta: <?php echo $item['dia_resposta']?></h4>
-                                    <hr style="width: 50% !important;"/>
+                        if($sql->rowCount() > 0) {
+                            foreach ($sql->fetchAll() as $item):
+                                ?>
+                                <div class="card card-nav-tabs">
+                                    <h3 class="card-header card-header-info">Remetente
+                                        - <?php echo $item['usr_remetente']; ?></h3>
+                                    <div class="card-body">
+                                        <h4 class="card-text text-justify" style="margin-left: 10%;">Assunto
+                                            - <?php echo $item['assunto']; ?>
+                                            <span class="badge badge-success" style="float: right; margin-right: 10%;">Respondida</span>
+                                        </h4>
+                                        <hr style="width: 50% !important;"/>
+                                        <h4 class="card-text text-justify" style="margin-left: 10%;">
+                                            Mensagem: <?php echo $item['msg_anterior'] ?></h4>
+                                        <hr style="width: 50% !important;"/>
+                                        <h4 class="card-text text-justify" style="margin-left: 10%;">
+                                            Resposta <?php echo $item['resposta'] ?></h4>
+                                        <h4 class="card-text text-justify" style="margin-right: 10%; float: right;">Dia
+                                            e hora da resposta: <?php echo $item['dia_resposta'] ?></h4>
+                                        <hr style="width: 50% !important;"/>
+                                    </div>
                                 </div>
-                            </div>
-                            <hr/>
-                            <?php
-                        endforeach;
+                                <hr/>
+                                <?php
+                            endforeach;
+                        }else{
+                            echo "<h2>Você ainda não possui respondeu nenhuma mensagem, ou não possui mensagens!</h2>";
+                        }
                         ?>
                     </div>
                 </div>
