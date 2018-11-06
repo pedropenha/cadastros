@@ -74,7 +74,7 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
                                         <h4 class="card-text text-justify" style="margin-left: 10%;">Mensagem: <?php echo $item['mensagem']?></h4>
                                         <hr style="width: 50% !important;"/>
                                         <h4 class="card-text text-justify" style="margin-left: 10%; float: left;">Recebida dia: <?php echo $item['hora']?></h4>
-                                        <a href="#0" class="btn btn-primary btn-round" style="float: right">Responder</a>
+                                        <a href="responder.php?id=<?php echo $item['id'];?>" class="btn btn-primary btn-round" style="float: right">Responder</a>
                                     </div>
                                 </div>
                                 <hr/>
