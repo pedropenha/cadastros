@@ -1,0 +1,10 @@
+.link-hover:hover{
+    text-decoration: underline !important;
+}
+.link-hover{
+    cursor: pointer !important;
+    color: #9c27b0 !important;
+}
+.text-button{
+    color: #fff !important;
+}
