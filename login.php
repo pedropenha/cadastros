@@ -6,7 +6,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])) {
     $email = addslashes($_POST['email']);
     $senha = addslashes($_POST['senha']);
 
-    $sql = $pdo->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ?");
+    $sql = $pdo->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ? AND tipo = 2");
     $sql->bindValue(1, $email);
     $sql->bindValue(2, md5($senha));
     $sql->execute();
@@ -47,7 +47,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])) {
                 <div class="card card-signup">
                     <form class="form" method="POST">
                         <div class="card-header card-header-info text-center">
-                            <h4 class="card-title">Administração</h4>
+                            <h4 class="card-title">Administração - UFGDWiki</h4>
                         </div>
                         <div class="card-body">
                             <br/>
