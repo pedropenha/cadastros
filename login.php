@@ -26,7 +26,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])) {
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="./assets/img/ufgd-universidade-federal-da-grande-dourados-logo-BA008DE1C7-seeklogo.com.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
@@ -55,7 +55,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])) {
                                 <span class="input-group-text">
                                     <i class="material-icons">mail</i>
                                 </span>
-                                <input type="email" class="form-control" placeholder="Seu email" name="email">
+                                <input type="email" class="form-control" placeholder="Seu email" name="email" required>
                             </div>
                             <br/>
 
@@ -63,7 +63,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])) {
                                 <span class="input-group-text">
                                     <i class="material-icons">lock_outline</i>
                                 </span>
-                                <input type="password" class="form-control" placeholder="Sua senha" name="senha">
+                                <input type="password" class="form-control" placeholder="Sua senha" name="senha" required>
                             </div>
                             <br/>
                         </div>

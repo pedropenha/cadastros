@@ -13,37 +13,51 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
     <!DOCTYPE html>
     <html>
     <head>
-        <meta charset="utf-8"/>
-        <link rel="ufgd icon" href="http://egressos.16mb.com/favicon.png">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <title>Administração - UFGDWiki</title>
-
-        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
-
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
         <!--     Fonts and icons     -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
-
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
         <!-- CSS Files -->
-        <link href="assets/css/material-kit.css" rel="stylesheet"/>
-        <link href="assets/css/material-kit.css.map" rel="stylesheet"/>
-        <link href="assets/css/material-kit.min.css" rel="stylesheet"/>
-
-        <!--   Core JS Files   -->
-        <script src="assets/js/material-kit.js" type="text/javascript"></script>
-        <script src="assets/js/material-kit.js.map" type="text/javascript"></script>
-        <script src="assets/js/material-kit.min.js" type="text/javascript"></script>
-        <script src="assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
-        <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
-        <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
-        <script src="assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
-        <script src="assets/js/plugins/jquery.sharrre.js" type="text/javascript"></script>
-        <script src="assets/js/plugins/moment.min.js" type="text/javascript"></script>
-        <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+        <link href="assets/css/material-kit.css?v=2.0.4" rel="stylesheet" />
+        <link href="assets/css/style.css" rel="stylesheet"/>
+        <!-- CSS Just for demo purpose, don't include it in your project -->
+        <link href="assets/demo/demo.css" rel="stylesheet" />
+        <title>Administração</title>
     </head>
-    <body style="background-color: transparent;">
+    <body style="background-color: white">
+    <nav class="navbar navbar-expand-lg bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="/cadastros" style="color: white !important;">Administração - UFGDWiki</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="material-icons text-light">
+                    menu
+                </i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php" style="color: white;"><i class="material-icons">home</i> Página principal  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add-user.php"><i class="material-icons">add</i> Adicionar usuario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mensagens.php"><i class="material-icons">message</i> Mensagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-nav" onclick="let r = confirm('Deseja sair do sistema?');
+                            if(r === true) window.location.href='sair.php';">
+                            <i class="material-icons">exit_to_app</i> Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container">
         <br/>
         <form method="POST">
@@ -77,11 +91,7 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
                 }
             }
             ?>
-            <h2>Editar usuario: <?php echo $_GET['nome']; ?><a href="./"
-                                                               class="btn btn-info btn-fab btn-fab-mini btn-round"
-                                                               style="float: right;"><i class="material-icons">arrow_back</i></a>
-            </h2>
-            <br/>
+            <h2>Editar usuario: <?php echo $_GET['nome']; ?></h2>
             <br/>
             <?php
             $sql = $pdo->prepare("SELECT * FROM users WHERE name = ?");
@@ -91,15 +101,16 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
 
             }
             ?>
-            <h4>Nome: </h4>
+            <h3>Nome: </h3>
             <input type="text" class="form-control" name="nome" value="<?php echo $item['name']; ?>">
-            <h4>E-mail</h4>
+            <h3>E-mail</h3>
             <input type="email" class="form-control" name="email" value="<?php echo $item['email']; ?>">
-            <h4>Senha (5+ caracteres</h4>
-            <input type="password" class="form-control" name="senha" value="<?php echo $item['password'] ?>"
-                   minlength="5"/>
-
-            <input class="btn btn-success" type="submit" value="Salvar alterações"/>
+            <h3>Senha (5+ caracteres)</h3>
+            <input type="password" class="form-control" name="senha" minlength="5"/>
+            <br/>
+            <input class="btn btn-success btn-round float-right" type="submit" value="Salvar alterações"/>
+            <br/>
+            <br/>
         </form>
     </div>
     </body>

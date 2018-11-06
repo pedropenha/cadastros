@@ -2,5 +2,6 @@
 session_start();
 
 unset($_SESSION['banco']);
-header("Location: index.php");
+$url = $_SERVER['BASE_URL'];
+header("Location: ".$url."/UFGDWiki");
 exit;

@@ -15,7 +15,7 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
     <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+        <link rel="icon" type="image/png" href="./assets/img/ufgd-universidade-federal-da-grande-dourados-logo-BA008DE1C7-seeklogo.com.png">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
@@ -27,35 +27,43 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
         <link href="assets/css/style.css" rel="stylesheet"/>
         <!-- CSS Just for demo purpose, don't include it in your project -->
         <link href="assets/demo/demo.css" rel="stylesheet" />
-        <title>Administração</title>
+        <title>Painel de administração</title>
     </head>
     <body style="background-color: white">
+    <nav class="navbar navbar-expand-lg bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="/cadastros" style="color: white !important;">Administração - UFGDWiki</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="material-icons text-light">
+                    menu
+                </i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.php" style="color: white;"><i class="material-icons">home</i> Página principal  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add-user.php"><i class="material-icons">add</i> Adicionar usuario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mensagens.php"><i class="material-icons">message</i> Mensagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-nav" onclick="let r = confirm('Deseja sair do sistema?');
+                            if(r === true) window.location.href='sair.php';">
+                            <i class="material-icons">exit_to_app</i> Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container">
         <?php $url = $_SERVER['BASE_URL'];?>
-        <div class="header">
-            <br/>
-            <img src="assets/img/ufgd-universidade-federal-da-grande-dourados-logo-BA008DE1C7-seeklogo.com.png" style="width: 100px; height: 105px;">
-            <h1 style="float: right;">Administração - <a class="link-hover" onclick="let r = confirm('Deseja ir para UFGDWiki'); if(r === true) window.location.href='<?php echo $url;?>/UFGDWiki';">UFGDWiki</a></h1>
 
-            <br/>
-            <a class="btn btn-danger btn-round text-button" onclick="let r = confirm('Deseja sair do sistema?');
-if(r === true) window.location.href='sair.php';" style="float: right">
-                <i class="material-icons">exit_to_app</i> Sair
-            </a>
-            <br/>
-            <br/>
-        </div>
-        <hr/>
-        <a class="btn btn-info btn-round" href="add-user.php" style="float: right;">
-            <i class="material-icons">add</i> Adicionar usuario</a>
-        <a class="btn btn-success btn-round" href="mensagens.php" style="float: left;"><i class="material-icons">
-                message
-            </i> Mensagens</a>
         <br/>
-        <br/>
-        <br/>
-        <hr/>
-        <h3>Usuarios</h3>
+        <h2>Usuarios</h2>
         <table class="table table-hover">
             <thead>
             <tr>
