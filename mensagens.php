@@ -142,7 +142,7 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
                                 <?php
                             endforeach;
                         }else{
-                            echo "<h2>Você ainda não possui respondeu nenhuma mensagem, ou não possui mensagens!</h2>";
+                            echo "<h2>Você ainda não respondeu nenhuma mensagem, ou não possui mensagens!</h2>";
                         }
                         ?>
                     </div>
