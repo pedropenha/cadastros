@@ -75,6 +75,9 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
                             <li class="nav-item">
                                 <a class="nav-link" href="#history" data-toggle="tab">Respondidas</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#user" data-toggle="tab">Usuarios não cadastrados</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -82,7 +85,7 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
                 <div class="tab-content text-center">
                     <div class="tab-pane active" id="home">
                         <?php
-                        $sql = "SELECT * FROM suporte.msg WHERE respondida = 0";
+                        $sql = "SELECT * FROM suporte.msg WHERE respondida = 0 AND registrado = 1";
                         $sql = $pdo->prepare($sql);
                         $sql->execute();
 
@@ -142,7 +145,37 @@ if(!isset($_SESSION['banco']) && empty($_SESSION['banco'])) {
                                 <?php
                             endforeach;
                         }else{
-                            echo "<h2>Você ainda não respondeu nenhuma mensagem, ou não possui mensagens!</h2>";
+                            echo "<h2>Você ainda não possui respondeu nenhuma mensagem, ou não possui mensagens!</h2>";
+                        }
+                        ?>
+                    </div>
+                    <div class="tab-pane active" id="user">
+                        <?php
+                        $sql = "SELECT * FROM suporte.msg WHERE respondida = 0 AND registrado = 0";
+                        $sql = $pdo->prepare($sql);
+                        $sql->execute();
+
+                        if($sql->rowCount() > 0){
+                            $user = $sql->fetchAll();
+                            foreach ($user as $item):
+                                ?>
+                                <div class="card card-nav-tabs">
+                                    <h3 class="card-header card-header-info">Email - <?php echo $item['email'];?></h3>
+                                    <div class="card-body">
+                                        <h4 class="card-text text-justify" style="margin-left: 10%;">Assunto - <?php echo $item['assunto']; if($item['respondida'] == 0)
+                                                echo "<span class=\"badge badge-danger\" style='float: right; margin-right: 10%;'>Não respondida</span>"?></h4>
+                                        <hr style="width: 50% !important;"/>
+                                        <h4 class="card-text text-justify" style="margin-left: 10%;">Mensagem: <?php echo $item['mensagem']?></h4>
+                                        <hr style="width: 50% !important;"/>
+                                        <h4 class="card-text text-justify" style="margin-left: 10%; float: left;">Recebida dia: <?php echo $item['hora']?></h4>
+                                        <a href="responder.php?id=<?php echo $item['id'];?>" class="btn btn-primary btn-round" style="float: right">Responder</a>
+                                    </div>
+                                </div>
+                                <hr/>
+                                <?php
+                            endforeach;
+                        }else{
+                            echo "<h2>Você ainda não possui nenhuma mensagem!</h2>";
                         }
                         ?>
                     </div>
